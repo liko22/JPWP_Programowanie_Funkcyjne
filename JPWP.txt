@@ -1,0 +1,42 @@
+Programowanie Funkcyjne - paradygmat kładący nacisk na tworzenie funkcji, przetwarzanie przez nie danych i zwracanie wyniku. 
+
+Funkcjne a obiektowe główna rożnica
+
+
+Główne cechy:
+zdjecie z tej strony: https://semcore.pl/czym-jest-programowanie-funkcyjne/
+
+-Pure functions i przejrzystość referencyjna (jakos to ujac bo to ze sobą scisle powiazane)
+*rozwiniecie + przyklad
+*brak skutkow ubocznych
+*łatwość debugowania i testów
+*Czyste funkcje gwarantują że przy podaniu tych samych danych wejscuowych zawsze otrzymamy identyczne dane wyjsciowe
+*przejrzystosc jest wtedy gdy np zamiast funkcji ktora zwraca 10 wstawisz tam liczbe 10 a program nei zauwazylby roznicy
+
+-immutability - Niezmienność/Niemutowalność
+*rozwiniecie + przyklad
+*po przypisaniu wartości nie mozna jej zmienic co zmniejsza liczbe bledow ze stanami
+
+-Funkcje wyższego rzędu i refaktoryzacja
+*rozwieniecie = przyklad
+*przyjmują inne funkcje jako argument lub zwraca funkcje jako wynik
+*takie podejscie umozliwia prostsze wykonywanie trudniejszych operacji poprzez rozbijanie bardziej wymagającego zadania na kilku łatwiejszych w realizacji. Ułatwia to także łatwiejsze utrzymanie i analize kodu.
+*rozbicie złożonej funkcji na kilka mniejszych pozwala na uzycie jakiegos fragmentu kodu do rozwiązywania kilku różnych problemow
+
+-Curry'ing
+*rozwiniecie + przyklad
+*Rozbijanie funkcji wieloargumentowych na serię funkcji z których każda będzie przyjmować dokładnie JEDEN a w efekcie otrzymamy ten sam rezultat co przy wieloargumentowej implementacji
+
+-Przejrzystość referencyjna
+*rozwiniecie + przyklad
+- wynik 
+
+Można powiedziec że program napisany w z zachowanie paradygmatu programowania funkcjnego tak ja jedno wielkie wyrażenie matematyczne, które dla tego samego zestawu danych
+zawsze zwraca tę samą wartość.
+
+
+
+
+Linki do źródeł:
+https://www.xenonstack.com/insights/functional-programming
+https://semcore.pl/czym-jest-programowanie-funkcyjne/
