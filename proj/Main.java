@@ -21,7 +21,7 @@ public class Main {
         //Inicjalizacja niemutowalnej listy zakupów
         List<Order> orders = List.of(
             new Order(
-                Map.of(products.get(0), 2.5),
+                Map.of(products.get(0), 2.5, products.get(1), 1.2),
                 LocalDate.now().minusDays(5)),
             new Order(
                 Map.of(products.get(1), 3.2),
@@ -37,5 +37,11 @@ public class Main {
             new Client("Kacper",50, orders.get(1)),
             new Client("Ola",20, orders.get(0))
         );
+
+        //Test niemutowalności listy
+        //products.add(new Product("test", 20.1));
+        //products.get(2).price=30;
+        products.set(0, new Product("Test", 10));
+
     }
 }
