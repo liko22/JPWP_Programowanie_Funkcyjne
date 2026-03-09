@@ -2,12 +2,23 @@ package proj;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Map;
+import java.util.function.*;
 
 public class Main {
     //Record - Specjalny modyfikator - pola obiektów są final więc idealnie do FP
-    public record Product(String name, double price) {};
-    public record Order(Map<Product,Double> products, LocalDate date) {};
-    public record Client(String name, int age, Order order) {};
+    public static record Product(String name, double price) {};
+    public static record Order(Map<Product,Double> products, LocalDate date) {};
+    public static record Client(String name, int age, Order order) {};
+
+    public static Predicate<Client> olderThan(int minAge){
+        return c -> c.age >=minAge;
+    }
+    public static Function<Client,String> clientName(){
+        return c -> c.name;
+    }
+    public static Function<List<Client>, List<String>> showClients(Predicate<Client> ageFilter){
+        return list -> list.stream().filter(ageFilter).map(clientName()).toList();
+    }
 
     public static void main(String[] args){
 
@@ -41,7 +52,8 @@ public class Main {
         //Test niemutowalności listy
         //products.add(new Product("test", 20.1));
         //products.get(2).price=30;
-        products.set(0, new Product("Test", 10));
+        //products.set(0, new Product("Test", 10));
 
+        List<String> result = showClients(olderThan(30)).apply(Clients);
     }
 }
